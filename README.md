@@ -27,3 +27,34 @@ git push origin first-pr
 ```
 Now a PR can be created on GitHub  
 Check the [Pull requests tab on GitHub](https://github.com/TsarSPb/hello-world/pulls) and its subsections like *Commits* and *Files changed* to review (and, hopefully, approve) PRs.
+
+# Deleting branch after a PR
+The branch can be safely deleted after merging
+> The deleted branch can be restored from GitHub UI - check the *Restore branch* button at the bottom of the closed PR.
+```
+git stash # use it if you forgot to commit some changes before merging
+git checkout master # have to switch branch before deleting it
+git branch -d first-pr 
+git push origin --delete first-pr # deleting and pushing
+> To https://github.com/TsarSPb/hello-world.git
+>  - [deleted]         first-pr
+git pull origin # pulling current state
+> remote: Counting objects: 100% (1/1), done.
+> Unpacking objects: 100% (1/1), 636 bytes | 5.00 KiB/s, done.
+>  * branch            master     -> FETCH_HEAD
+> Updating f893125..44315f0
+> Fast-forward
+>  README.md | 30 +++++++++++++++++++++++++++++-
+>  1 file changed, 29 insertions(+), 1 deletion(-)
+git checkout -d second-pr # creating a new branch for the second PR
+git stash apply # use it if you have some code hidden in the stash
+> On branch second-pr
+> Changes not staged for commit:
+>   (use "git add <file>..." to update what will be committed)
+>   (use "git restore <file>..." to discard changes in working directory)
+>         modified:   README.md
+> 
+> no changes added to commit (use "git add" and/or "git commit -a")
+git commit -a -m "Added info about stashing and deleting old branches. All set for the second PR"
+git push origin second-pr
+```
