@@ -25,5 +25,5 @@ git push origin first-pr
 > To https://github.com/TsarSPb/hello-world.git
 >  * [new branch]      first-pr -> first-pr
 ```
-Now PR can be created in GitHub  
-Check the [Pull requests tab on GitHub](https://github.com/TsarSPb/hello-world/pulls) and its subsections like *Commits* and *Files changed* to review PRs.
+Now a PR can be created on GitHub  
+Check the [Pull requests tab on GitHub](https://github.com/TsarSPb/hello-world/pulls) and its subsections like *Commits* and *Files changed* to review (and, hopefully, approve) PRs.
