@@ -58,3 +58,6 @@ git stash apply # use it if you have some code hidden in the stash
 git commit -a -m "Added info about stashing and deleting old branches. All set for the second PR"
 git push origin second-pr
 ```
+
+# GitHub Actions
+Added a sample action with a basic workflow
