@@ -34,3 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  stage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greeting
+        run: echo Running $GITHUB_WORKFLOW on commit $GITHUB_SHA
