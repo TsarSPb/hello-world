@@ -1,6 +1,6 @@
-# hello-world
+# PR and branch
 
-# Creating a PR
+## Creating a PR
 ```
 git clone https://github.com/TsarSPb/hello-world.git
 cd .\hello-world\
@@ -28,7 +28,7 @@ git push origin first-pr
 Now a PR can be created on GitHub  
 Check the [Pull requests tab on GitHub](https://github.com/TsarSPb/hello-world/pulls) and its subsections like *Commits* and *Files changed* to review (and, hopefully, approve) PRs.
 
-# Deleting branch after a PR
+## Deleting branch after a PR
 The branch can be safely deleted after merging
 > The deleted branch can be restored from GitHub UI - check the *Restore branch* button at the bottom of the closed PR.
 ```
@@ -61,3 +61,10 @@ git push origin second-pr
 
 # GitHub Actions
 Added a sample action with a basic workflow
+
+## Building Docker image
+```
+docker build -t tsarspb/sandkasten:v1 -t tsarspb/sandkasten:latest .
+docker login -u tsarspb
+docker push tsarspb/sandkasten:latest tsarspb/sandkasten:v1
+```
