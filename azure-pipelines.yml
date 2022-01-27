@@ -43,3 +43,6 @@ stages:
           version=$(cat index.html)
           echo Printing logs....
           echo "##vso[task.setvariable variable=version]$version"
+          echo Printing version2....
+          version2=version_var
+          echo "##vso[task.setvariable variable=version2]$version2"
