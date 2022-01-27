@@ -47,5 +47,11 @@ jobs:
         with:
           name: output-log-file
       - name: Printing logs
-        run: echo $(cat output.log)
         shell: bash
+        run: |
+          echo Printing logs....
+          echo "Printing logs...."
+          echo $(cat output.log)
+          echo "$(cat output.log)"
+          echo $(ll)
+          echo "$(ll)"
