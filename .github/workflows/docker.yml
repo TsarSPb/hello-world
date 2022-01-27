@@ -30,7 +30,7 @@ jobs:
       - shell: bash
         run: |
           expr 1 + 1 > output.log
-          "\nCurrent date is:\n"
+          echo "\nCurrent date is:\n" > output.log
           date > output.log
       - name: Upload output file
         uses: actions/upload-artifact@v2
