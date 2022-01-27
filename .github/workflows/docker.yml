@@ -30,8 +30,8 @@ jobs:
       - shell: bash
         run: |
           expr 1 + 1 > output.log
-          echo "\nCurrent date is:\n" > output.log
-          date > output.log
+          echo "\nCurrent date is:\n" >> output.log
+          date >> output.log
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
@@ -53,5 +53,5 @@ jobs:
           echo "Printing logs...."
           echo $(cat output.log)
           echo "$(cat output.log)"
-          echo $(ll)
-          echo "$(ll)"
+          echo $(ls)
+          echo "$(ls)"
