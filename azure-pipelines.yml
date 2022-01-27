@@ -26,6 +26,9 @@ stages:
           repository: $(imageName)
           command: build
           Dockerfile: ./Dockerfile
+          tags: |
+            latest
+            azPipe
       - task: Docker@2
         displayName: Push image
         inputs:
@@ -35,3 +38,4 @@ stages:
           command: push
           tags: |
             latest
+            azPipe
