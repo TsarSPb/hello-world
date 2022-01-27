@@ -69,4 +69,5 @@ Added a sample action with a basic workflow
 docker build -t tsarspb/sandkasten:v1 -t tsarspb/sandkasten:latest .
 docker login -u tsarspb
 docker push tsarspb/sandkasten:latest tsarspb/sandkasten:v1
+docker run -p 8080:80 -d tsarspb/sandkasten
 ```
