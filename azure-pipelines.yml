@@ -8,6 +8,7 @@ trigger:
 
 variables:
   imageName: 'tsarspb/sandkasten'
+  dockerHub: 'DockerHub'
 
 stages:
 - stage: BuildingImage
@@ -23,3 +24,20 @@ stages:
           repository: $(imageName)
           command: build
           Dockerfile: ./Dockerfile
+
+- stage: PushingImage
+  pool:
+    name: Azure Pipelines
+    vmImage: ubuntu-latest
+  jobs:
+    - job: PushingImage
+      steps:
+      - task: Docker@2
+        displayName: Push image
+        inputs:
+          containerRegistry: |
+            $(dockerHub)
+          repository: $(imageName)
+          command: push
+          tags: |
+            latest
