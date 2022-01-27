@@ -26,14 +26,6 @@ stages:
           repository: $(imageName)
           command: build
           Dockerfile: ./Dockerfile
-
-- stage: PushingImage
-  pool:
-    name: Azure Pipelines
-    vmImage: ubuntu-latest
-  jobs:
-    - job: PushingImage
-      steps:
       - task: Docker@2
         displayName: Push image
         inputs:
