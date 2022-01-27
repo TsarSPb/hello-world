@@ -7,7 +7,7 @@ trigger:
 - master
 
 variables:
-  imageName: 'tsarspb/sandkasten'
+  imageName: 'sandkasten'
 
 stages:
 - stage: Building image
@@ -23,6 +23,3 @@ stages:
           repository: $(imageName)
           command: build
           Dockerfile: ./Dockerfile
-
-
-
