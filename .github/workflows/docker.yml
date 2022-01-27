@@ -27,3 +27,21 @@ jobs:
           context: .
           push: true
           tags: tsarspb/sandkasten:latest
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+          "\nCurrent date is:\n"
+          date > output.log
+      - name: Upload output file
+        uses: actions/upload-artifact@v2
+        with:
+          name: output-log-file
+          path: output.log
+  example-job:
+    name: Printing logs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: output-log-file
