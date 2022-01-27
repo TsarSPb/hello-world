@@ -50,8 +50,5 @@ jobs:
         shell: bash
         run: |
           echo Printing logs....
-          echo "Printing logs...."
-          echo $(cat output.log)
-          echo "$(cat output.log)"
-          echo $(ls)
-          echo "$(ls)"
+          echo "$(cat output.log)""
+          echo "$(ls -l)""
