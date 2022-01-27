@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+variables:
+  imageName: 'tsarspb/sandkasten'
+
+stages:
+- stage: Building image
+  pool:
+    name: Azure Pipelines
+    vmImage: ubuntu-latest
+  jobs:
+    - job: BuildingImage
+      steps:
+      - task: Docker@2
+        displayName: Build an image
+        inputs:
+          repository: $(imageName)
+          command: build
+          Dockerfile: ./Dockerfile
+
+
+
