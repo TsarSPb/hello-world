@@ -10,7 +10,7 @@ variables:
   imageName: 'sandkasten'
 
 stages:
-- stage: Building image
+- stage: BuildingImage
   pool:
     name: Azure Pipelines
     vmImage: ubuntu-latest
