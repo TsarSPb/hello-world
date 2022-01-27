@@ -46,3 +46,5 @@ stages:
           echo Printing version2....
           version2=version_var
           echo "##vso[task.setvariable variable=version2]$version2"
+          echo $(pwd)
+          echo $(ll)
