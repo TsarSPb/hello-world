@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/tsarangel/AzureRMPipeline/_apis/build/status/TsarSPb.hello-world?branchName=master)](https://dev.azure.com/tsarangel/AzureRMPipeline/_build/latest?definitionId=6&branchName=master)
+
 # PR and branch
 
 ## Creating a PR
