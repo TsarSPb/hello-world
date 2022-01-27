@@ -7,7 +7,7 @@ trigger:
 - master
 
 variables:
-  imageName: 'sandkasten'
+  imageName: 'tsarspb/sandkasten'
 
 stages:
 - stage: BuildingImage
