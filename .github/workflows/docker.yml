@@ -46,3 +46,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: output-log-file
+      - name: Printing logs
+        run: cat output-log-file
+        shell: bash
