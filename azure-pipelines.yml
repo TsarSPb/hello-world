@@ -39,3 +39,7 @@ stages:
           tags: |
             latest
             azPipe
+      - bash: |
+          version=$(cat index.html)
+          echo Printing logs....
+          echo "##vso[task.setvariable variable=version]$version"
