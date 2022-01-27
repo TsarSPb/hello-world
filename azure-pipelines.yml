@@ -11,12 +11,12 @@ variables:
   dockerHub: 'DockerHub'
 
 stages:
-- stage: BuildingImage
+- stage: BuildPushImage
   pool:
     name: Azure Pipelines
     vmImage: ubuntu-latest
   jobs:
-    - job: BuildingImage
+    - job: BuildPushImage
       steps:
       - task: Docker@2
         displayName: Build an image
