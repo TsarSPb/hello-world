@@ -40,6 +40,7 @@ jobs:
   example-job:
     name: Printing logs
     runs-on: ubuntu-latest
+    needs: [ push_to_registry ]
     steps:
       - name: Download a single artifact
         uses: actions/download-artifact@v2
