@@ -1,15 +1,15 @@
 name: CDtest
-on: 
-  - push
-      branches:
-        - master
-      tags:
-        - 'release/**'
-  - create:
-      branches:
-        - master
-      tags:
-        - 'release/**'
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - 'release/**'
+  create:
+    branches:
+      - master
+    tags:
+      - 'release/**'
 
 jobs:
   build:
