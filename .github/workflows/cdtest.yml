@@ -4,12 +4,12 @@ on:
     branches:
       - master
     tags:
-      - 'release/**'
+      - release/*
   create:
     branches:
       - master
     tags:
-      - 'release/**'
+      - release/*
 
 jobs:
   build:
