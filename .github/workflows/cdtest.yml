@@ -1,8 +1,5 @@
 name: CDtest
 on:
-  push:
-    tags:
-      - 'release/**'
   create:
     tags:
       - 'release/**'
