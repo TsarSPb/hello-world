@@ -1,11 +1,11 @@
 name: CDtest
-on:
+on:  
   push:
     tags:
-      - release/*
+      - '*'
   create:
     tags:
-      - release/*
+      - '*'
 
 jobs:
   build:
